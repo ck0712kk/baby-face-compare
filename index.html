@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寶寶像誰？</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>寶寶像誰？</h1>
+        
+        <div class="upload-section">
+            <div class="upload-box">
+                <h3>爸爸的照片</h3>
+                <input type="file" id="fatherPhoto" accept="image/*">
+                <div class="preview" id="fatherPreview"></div>
+            </div>
+
+            <div class="upload-box">
+                <h3>媽媽的照片</h3>
+                <input type="file" id="motherPhoto" accept="image/*">
+                <div class="preview" id="motherPreview"></div>
+            </div>
+
+            <div class="upload-box">
+                <h3>寶寶的照片</h3>
+                <input type="file" id="babyPhoto" accept="image/*">
+                <div class="preview" id="babyPreview"></div>
+            </div>
+        </div>
+
+        <button id="analyzeBtn">開始分析</button>
+
+        <div id="result" class="result-section">
+            <h2>分析結果</h2>
+            <div class="similarity-bars">
+                <div class="similarity-bar">
+                    <label>像爸爸</label>
+                    <div class="bar">
+                        <div class="fill" id="fatherSimilarity"></div>
+                    </div>
+                    <span id="fatherPercentage">0%</span>
+                </div>
+                <div class="similarity-bar">
+                    <label>像媽媽</label>
+                    <div class="bar">
+                        <div class="fill" id="motherSimilarity"></div>
+                    </div>
+                    <span id="motherPercentage">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
